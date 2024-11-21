@@ -21,8 +21,8 @@ def chatbot(file_path: str, question: str, k: int):
      # entre más grande sea "chunk_size" va a preservar más contexto.
      # Lo que implica que usará más información para realizar la predicción
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,  # Número de caracteres para cada chunk 
-        chunk_overlap=150  # Número de solapamientos entre chunks
+        chunk_size=1500,  # Número de caracteres para cada chunk 
+        chunk_overlap=300  # Número de solapamientos entre chunks
     )
     
     docs = text_splitter.split_documents(documentos)
